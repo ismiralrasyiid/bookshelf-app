@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="usernameTitle">Koleksi Buku Saya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1><i class="fa fa-book"></i>Koleksi Buku <span id="usernameH1">Saya</span></h1>
+        <ul class="nav">
+            <li id="inputNavBtn">Tambah<i class="fa fa-plus"></i></li>
+            <li id="searchNavBtn">Cari<i class="fa fa-search"></i></li>
+        </ul>
+    </header>
+    <main>
+        <div class="bookshelf-container">
+            <div class="bookshelf incomplete">
+                <section class="booklist">
+                    <h2>Belum selesai dibaca <i class="fa fa-warning"></i></h2>
+                    <div id="incompleteBooks" class="bookdiv">
+                        <!-- Tugas Javascript -->
+                    </div>
+                </section>
+            </div>
+            <div class="bookshelf complete">
+                <section class="booklist">
+                    <h2>Selesai dibaca <i class="fa fa-thumbs-up"></i></h2>
+                    <div id="completeBooks" class="bookdiv">
+                        <!-- Tugas Javascript -->
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="popup-container hidden" id="inputMenu">
+            <section class="input">
+                <h2>Tambahkan Buku Baru</i></h2>
+                <form id="inputForm">
+                    <div class="inputBar">
+                        <label for="inputBookTitle">Judul</label>
+                        <input id="inputBookTitle" type="text" required>
+                    </div>
+                    <div class="inputBar">
+                        <label for="inputBookAuthor">Penulis</label>
+                        <input id="inputBookAuthor" type="text" required>
+                    </div>
+                    <div class="inputBar">
+                        <label for="inputBookYear">Tahun</label>
+                        <input id="inputBookYear" type="number" required>
+                    </div>
+                    <div class="inputInline">
+                        <label class="changeSpan" for="inputBookIsComplete">Selesai dibaca</label>
+                        <input class="changeSpan" id="inputBookIsComplete" type="checkbox">
+                    </div>
+                    <button id="bookSubmit" type="submit">Tambahkan buku ke rak <span>Belum selesai
+                            dibaca</span><i class="fa fa-add"></i></button>
+                    <button type="button" class="closeBtn" id="inputCloseBtn"><i class="fa fa-remove"></i></button>
+                </form>
+            </section>
+        </div>
+        <div class="popup-container hidden" id="searchMenu">
+            <section class="search">
+                <h2>Cari Judul Buku</h2>
+                <form id="searchForm">
+                    <label for="searchBookTitle">Judul</label>
+                    <input id="searchBookTitle" type="text" required>
+                    <button id="searchSubmit" type="submit">Cari <i class="fa fa-search"></i></button>
+                </form>
+                <button type="button" class="closeBtn" id="searchCloseBtn"><i class="fa fa-remove"></i></button>
+            </section>
+        </div>
+    </main>
+    <div id="confirmationBox" class="hidden">
+        <div class="confirmationBox">
+            <p>Yakin hapus buku ini dari koleksi?</p>
+            <div class="option">
+                <button id="confirmYes" type="button">Ya</button>
+                <button id="confirmNo" type="button">Tidak</button>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="backBtn hidden">Kembalikan</button>
+    <footer>
+        <p>Terima kasih kepada <a
+                href="https://unsplash.com/photos/sxQK5Zo94g4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"
+                target="_blank">Pickawood</a> atas background image.
+        </p>
+        <p>Code oleh <a href="https://ismiralrasyiid.github.io/" target="_blank">Ismir Al Rasyiid</a>.</p>
+    </footer>
+    <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.css">
+    <script src="popUpDisplayer.js"></script>
+    <script src="dataHandler.js"></script>
+</body>
+
+</html>
