@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2/dist/sweetalert2.all.min.js'
 // VARIABLES
 const localUsernameKey = "LOCAL_USERNAME";
 const localSavedBookKey = "LOCAL_SAVED_BOOK";
